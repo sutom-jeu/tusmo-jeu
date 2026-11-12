@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tusmo Jeu Gratuit (novembre 2026) – Mot du Jour, Suite et Partie Infinie</title>
+<meta name="description" content="Jouez au Tusmo gratuitement : trouvez des mots de 6 à 9 lettres en 6 essais, première lettre donnée. Mot du jour, suite du jour de 4 mots, partie infinie, règles et stratégies.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Tusmo Jeu – Mot du jour, suite du jour et partie infinie">
+<meta property="og:description" content="Le jeu de mots Tusmo en ligne : mots de 6 à 9 lettres, carrés rouges et ronds jaunes. Règles, astuces par longueur de mot et statistiques.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700;800&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Qu'est-ce que le Tusmo ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Le Tusmo est un jeu de mots français en ligne inspiré de Motus. Il faut trouver un mot de 6 à 9 lettres en six essais, la première lettre étant donnée, grâce aux couleurs rouge, jaune et bleu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quelle est la différence entre Tusmo et Sutom ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Les deux jeux utilisent les mêmes couleurs et donnent la première lettre. Le Tusmo fait varier la longueur du mot de 6 à 9 lettres et propose une suite de quatre mots, alors que Sutom Jeu se joue avec des mots de 6 lettres."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Comment fonctionne la suite du jour ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "La suite du jour enchaîne quatre mots de 6, 7, 8 et 9 lettres. Chaque mot se joue en six essais. Si vous en ratez un, la suite s'arrête et votre score est le nombre de mots trouvés."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Combien d'essais a-t-on au Tusmo ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Vous avez six essais par mot, quelle que soit sa longueur. Un indice par mot peut révéler une lettre bien placée."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Le Tusmo est-il gratuit ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui. Le Tusmo se joue gratuitement dans le navigateur, sur mobile ou ordinateur, sans inscription ni téléchargement."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Peut-on jouer au Tusmo sans limite ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui, avec le mode Infini. Un nouveau mot est tiré à chaque partie et vous pouvez choisir sa longueur, de 6 à 9 lettres."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Faut-il taper les accents au Tusmo ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non. Les mots s'écrivent sans accents ni cédilles. Si vous tapez une lettre accentuée au clavier, elle est convertie automatiquement en lettre simple."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Mes statistiques Tusmo sont-elles sauvegardées ?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Oui, dans votre navigateur. Parties jouées, pourcentage de victoires, série en cours et répartition des essais sont gardés sur votre appareil, sans compte."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<div class="notice">Site de fans non officiel · aucun lien avec Tusmo, SUTOM ou l'émission Motus</div>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a href="#" class="brand" aria-label="Tusmo"><span class="lg r">T</span><span class="lg">U</span><span class="lg">S</span><span class="lg y">M</span><span class="lg">O</span></a>
+    <button class="hamb" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Menu principal">
+      <a href="#jeu">Jouer</a>
+      <a href="#regles">Règles &amp; astuces</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="h-head">
+      <p class="kick"><span class="cm">novembre 2026</span> · mots de 6 à 9 lettres</p>
+      <h1>Tusmo Jeu : le mot du jour en 6 essais</h1>
+      <p class="lead">Le Tusmo est le jeu de lettres français qui varie la longueur du mot mystère, de 6 à 9 lettres. Jouez au mot du jour, enchaînez la suite du jour ou lancez une partie infinie. Vous préférez la version classique à 6 lettres ? Essayez <a href="https://sutomjeu.com/">Sutom Jeu</a>.</p>
+    </div>
+    <div class="play">
+      <div class="game" id="jeu">
+        <div class="modes" role="tablist" aria-label="Mode de jeu">
+          <button type="button" class="on" data-m="jour" role="tab" aria-selected="true">Mot du jour</button>
+          <button type="button" data-m="suite" role="tab" aria-selected="false">Suite du jour</button>
+          <button type="button" data-m="libre" role="tab" aria-selected="false">Infini</button>
+        </div>
+        <div class="g-bar">
+          <p class="g-info" id="info"></p>
+          <select id="len" aria-label="Longueur du mot" hidden><option value="0">Longueur aléatoire</option><option value="6">6 lettres</option><option value="7">7 lettres</option><option value="8">8 lettres</option><option value="9">9 lettres</option></select>
+          <button type="button" class="hint" id="hint">💡 Indice</button>
+        </div>
+        <div class="steps" id="steps" hidden></div>
+        <div class="grid" id="grid" aria-live="polite"></div>
+        <div class="kb" id="kb" aria-label="Clavier"></div>
+        <div class="end" id="end" hidden></div>
+      </div>
+      <aside class="side">
+        <div class="legend">
+          <p class="s-h">Les couleurs</p>
+          <p><span class="sq r">E</span> Bien placée</p>
+          <p><span class="sq y">E</span> Présente, mal placée</p>
+          <p><span class="sq b">E</span> Absente du mot</p>
+        </div>
+        <div class="stats">
+          <p class="s-h">Vos statistiques (mot du jour)</p>
+          <div class="st-n" id="stN"></div>
+          <div class="dist" id="dist"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="guide" id="regles">
+  <div class="wrap g-in">
+    <article class="prose">
+      <h2>Le Tusmo jeu expliqué simplement</h2>
+      <p>Le <b>Tusmo</b> est un jeu de mots en ligne inspiré de l'émission <b>Motus</b>, dont son nom est une anagramme. Comme Sutom, il donne la première lettre et colore chaque proposition en rouge, jaune ou bleu. Sa grande particularité : la <b>longueur du mot change</b>. Un jour vous cherchez un mot de 6 lettres, le lendemain un mot de 9 lettres. Cette variété rend le Tusmo jeu plus imprévisible, et c'est ce qui plaît à ses joueurs fidèles.</p>
+
+      <h3>Les règles du Tusmo</h3>
+      <ol>
+        <li>La grille affiche la <b>première lettre</b> et le nombre de cases du mot mystère (6, 7, 8 ou 9).</li>
+        <li>Tapez un <b>mot de la même longueur</b> qui commence par cette lettre et validez avec Entrée.</li>
+        <li>Une <b>lettre rouge</b> est à la bonne place, une <b>lettre dans un rond jaune</b> est dans le mot mais ailleurs, une <b>lettre sur fond bleu</b> n'est pas dans le mot.</li>
+        <li>Vous disposez de <b>six essais</b>. Les mots s'écrivent sans accents.</li>
+        <li>Un <b>indice</b> par mot peut révéler une lettre bien placée.</li>
+      </ol>
+
+      <h3>Les trois façons de jouer</h3>
+      <div class="modes-c">
+        <div><b>Mot du jour</b><p>Un mot par jour, identique pour tous. Sa longueur tourne de 6 à 9 lettres. C'est le mode qui alimente vos statistiques.</p></div>
+        <div><b>Suite du jour</b><p>Quatre mots d'affilée, de 6, 7, 8 puis 9 lettres. Une erreur arrête la suite : votre score est le nombre de mots trouvés.</p></div>
+        <div><b>Infini</b><p>Un nouveau mot à chaque partie. Choisissez la longueur ou laissez le hasard décider. Idéal pour s'entraîner.</p></div>
+      </div>
+      <p>Sur notre site principal, le <a href="https://sutomjeu.com/tusmo/">Tusmo du jour</a> propose aussi des archives pour rejouer les mots des jours précédents.</p>
+
+      <h3>Exemple : un mot de 8 lettres en 3 essais</h3>
+      <p>Le mot mystère commence par <b>P</b> et compte 8 lettres.</p>
+      <div class="ex">
+        <div class="ex-row"><span class="ex-n">Essai 1</span><span class="sq r">P</span><span class="sq r">A</span><span class="sq b">N</span><span class="sq b">T</span><span class="sq b">A</span><span class="sq r">L</span><span class="sq r">O</span><span class="sq r">N</span></div>
+        <div class="ex-row"><span class="ex-n">Essai 2</span><span class="sq r">P</span><span class="sq r">A</span><span class="sq b">T</span><span class="sq r">I</span><span class="sq b">E</span><span class="sq y">N</span><span class="sq b">C</span><span class="sq b">E</span></div>
+        <div class="ex-row"><span class="ex-n">Essai 3</span><span class="sq r">P</span><span class="sq r">A</span><span class="sq r">P</span><span class="sq r">I</span><span class="sq r">L</span><span class="sq r">L</span><span class="sq r">O</span><span class="sq r">N</span></div>
+      </div>
+      <p><b>PANTALON</b> est un excellent départ : il confirme P et A, et place L, O et N en fin de mot. Il élimine aussi le T. On sait maintenant que le mot ressemble à <b>P A _ _ _ L O N</b>. <b>PATIENCE</b> place le I en quatrième position et écarte E et C. Avec P A ? I ? L O N, la réponse saute aux yeux : <b>PAPILLON</b>.</p>
+
+      <h3>Stratégies selon la longueur du mot</h3>
+      <ul>
+        <li><b>6 lettres</b> : cherchez cinq lettres différentes dès le premier essai et testez au moins deux voyelles.</li>
+        <li><b>7 lettres</b> : pensez aux fins en -AGE, -EUR, -IER, -ETTE ou -ON, très fréquentes dans les noms communs.</li>
+        <li><b>8 lettres</b> : les mots longs ont souvent des lettres doubles (LL, SS, TT, PP). Ne les excluez pas trop vite.</li>
+        <li><b>9 lettres</b> : repérez d'abord la terminaison (-ERIE, -ETTE, -AIRE, -ENCE) puis remplissez le début ; c'est souvent plus rapide.</li>
+      </ul>
+
+      <h3>Pourquoi jouer au Tusmo jeu chaque jour ?</h3>
+      <p>Le Tusmo jeu se joue en quelques minutes, mais il fait travailler beaucoup de choses : le vocabulaire, l'orthographe sans accents, la mémoire des lettres déjà testées et la logique d'élimination. Les mots longs de 8 ou 9 lettres obligent à réfléchir en morceaux (préfixe, racine, terminaison), un vrai exercice pour les élèves comme pour les adultes.</p>
+      <p>C'est aussi un jeu social. Tout le monde reçoit le même mot du jour, alors on compare ses grilles en famille, au bureau ou sur les réseaux, sans dévoiler la réponse grâce aux carrés de couleur. Et si le mot du jour ne suffit pas, la suite du jour et le mode infini prolongent le plaisir. Pour progresser vite au Tusmo jeu, jouez tous les jours et regardez vos statistiques : la répartition de vos essais montre en combien de coups vous trouvez le plus souvent le mot.</p>
+      <p><b>Bloqué sur un mot ?</b> Écrivez sur un papier les lettres rouges à leur place, la liste des lettres jaunes et celle des lettres éliminées. Puis cherchez les terminaisons possibles avant le début du mot. Si rien ne vient, l'indice peut révéler une lettre bien placée.</p>
+
+      <h3>Tusmo ou Sutom : lequel choisir ?</h3>
+      <div class="tbl">
+        <table>
+          <thead><tr><th></th><th>Tusmo</th><th>Sutom Jeu</th></tr></thead>
+          <tbody>
+            <tr><td>Longueur des mots</td><td>6 à 9 lettres</td><td>6 lettres</td></tr>
+            <tr><td>Première lettre</td><td>Donnée</td><td>Donnée</td></tr>
+            <tr><td>Essais</td><td>6</td><td>6</td></tr>
+            <tr><td>Modes</td><td>Mot du jour, suite, infini</td><td>Mot du jour, illimité</td></tr>
+            <tr><td>Idéal pour</td><td>Varier les défis</td><td>Une partie rapide chaque jour</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Les deux jeux se complètent : beaucoup de joueurs font leur Sutom au petit déjeuner et leur Tusmo à la pause de midi.</p>
+
+      <h3>D'autres jeux de mots à découvrir</h3>
+      <div class="others">
+        <div class="o-card">
+          <p class="o-t">Pédantix</p>
+          <p><a href="https://sutomjeu.com/pedantix/">Pédantix</a> vous cache une page Wikipédia entière. Proposez des mots : ceux qui apparaissent dans l'article se dévoilent, et les mots de sens proche s'affichent en gris. Le Pédantix du jour change à minuit, et le but est de trouver le titre de la page.</p>
+        </div>
+        <div class="o-card">
+          <p class="o-t">Pedantle</p>
+          <p><a href="https://sutomjeu.com/pedantle/">Pedantle</a> est la version anglaise de Pédantix. Le principe est le même, avec une page Wikipédia en anglais à deviner chaque jour : un bon exercice pour progresser en vocabulaire anglais tout en s'amusant.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap faq-in">
+    <h2>Questions fréquentes sur le Tusmo</h2>
+    <details open><summary>Qu&#x27;est-ce que le Tusmo ?</summary><p>Le Tusmo est un jeu de mots français en ligne inspiré de Motus. Il faut trouver un mot de 6 à 9 lettres en six essais, la première lettre étant donnée, grâce aux couleurs rouge, jaune et bleu.</p></details>
+    <details><summary>Quelle est la différence entre Tusmo et Sutom ?</summary><p>Les deux jeux utilisent les mêmes couleurs et donnent la première lettre. Le Tusmo fait varier la longueur du mot de 6 à 9 lettres et propose une suite de quatre mots, alors que Sutom Jeu se joue avec des mots de 6 lettres.</p></details>
+    <details><summary>Comment fonctionne la suite du jour ?</summary><p>La suite du jour enchaîne quatre mots de 6, 7, 8 et 9 lettres. Chaque mot se joue en six essais. Si vous en ratez un, la suite s&#x27;arrête et votre score est le nombre de mots trouvés.</p></details>
+    <details><summary>Combien d&#x27;essais a-t-on au Tusmo ?</summary><p>Vous avez six essais par mot, quelle que soit sa longueur. Un indice par mot peut révéler une lettre bien placée.</p></details>
+    <details><summary>Le Tusmo est-il gratuit ?</summary><p>Oui. Le Tusmo se joue gratuitement dans le navigateur, sur mobile ou ordinateur, sans inscription ni téléchargement.</p></details>
+    <details><summary>Peut-on jouer au Tusmo sans limite ?</summary><p>Oui, avec le mode Infini. Un nouveau mot est tiré à chaque partie et vous pouvez choisir sa longueur, de 6 à 9 lettres.</p></details>
+    <details><summary>Faut-il taper les accents au Tusmo ?</summary><p>Non. Les mots s&#x27;écrivent sans accents ni cédilles. Si vous tapez une lettre accentuée au clavier, elle est convertie automatiquement en lettre simple.</p></details>
+    <details><summary>Mes statistiques Tusmo sont-elles sauvegardées ?</summary><p>Oui, dans votre navigateur. Parties jouées, pourcentage de victoires, série en cours et répartition des essais sont gardés sur votre appareil, sans compte.</p></details>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="Tusmo"><span class="lg r">T</span><span class="lg">U</span><span class="lg">S</span><span class="lg y">M</span><span class="lg">O</span></a>
+    <p>Ce site est un jeu d'entraînement et un guide indépendants, créés par des fans. Il n'est ni affilié, ni approuvé par Tusmo, SUTOM ou l'émission Motus. Les marques citées appartiennent à leurs propriétaires.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(function(){
+  var W={"6": ["ACTEUR", "AGNEAU", "ANANAS", "ANIMAL", "ARGENT", "AVOCAT", "AVENIR", "ALERTE", "ARCADE", "BALADE", "BALCON", "BALLON", "BANANE", "BANQUE", "BARQUE", "BASSIN", "BATEAU", "BEURRE", "BILLET", "BOUCHE", "BOUCLE", "BOUGIE", "BOUTON", "BRIQUE", "BUREAU", "CADEAU", "CAHIER", "CAMION", "CANARD", "CANAPE", "CARNET", "CARTON", "CASQUE", "CERCLE", "CERISE", "CHAISE", "CHALET", "CHANCE", "CHARME", "CHATON", "CHEMIN", "CHEVAL", "CINEMA", "CITRON", "CLOCHE", "COCHON", "COFFRE", "COMETE", "CORDON", "COUPLE", "COUSIN", "CRAYON", "DANGER", "DESSIN", "DOUCHE", "DRAGON", "ECLAIR", "ECORCE", "EGLISE", "ENFANT", "EPONGE", "ESCALE", "ETOILE", "FIGURE", "FLACON", "FLAMME", "FLEUVE", "FLOCON", "FOURMI", "FRAISE", "GARAGE", "GATEAU", "GIRAFE", "GLACON", "GOUTTE", "GRAINE", "HAMEAU", "HOMARD", "HUITRE", "JAMBON", "JARDIN", "JOUEUR", "JUMEAU", "LAGUNE", "LEGUME", "LETTRE", "LEZARD", "LIMACE", "MAISON", "MANCHE", "MARCHE", "MARINE", "MARRON", "MENTHE", "METIER", "MIROIR", "MOMENT", "MONTRE", "MOULIN", "MOUTON", "NATURE", "NAVIRE", "NOMBRE", "OISEAU", "ORANGE", "ORTEIL", "PALAIS", "PANIER", "PAPIER", "PARFUM", "PENSEE", "PERSIL", "PIGEON", "PILOTE", "PIMENT", "PIRATE", "PLANTE", "POTION", "POULET", "POUMON", "PRINCE", "PRISON", "PROFIL", "PUZZLE", "RADEAU", "RAISIN", "RAYURE", "REFUGE", "REGARD", "REMEDE", "RENARD", "REQUIN", "RIVAGE", "ROCHER", "ROSEAU", "SALADE", "SAUMON", "SIESTE", "SIGNAL", "SOLEIL", "SOMMET", "SOURCE", "SOURIS", "TEMPLE", "TIROIR", "TISANE", "TOMATE", "TORTUE", "TRAPPE", "TRESOR", "TRICOT", "TUNNEL", "VALISE", "VALLEE", "VERGER", "VOLCAN", "VOYAGE"], "7": ["ABRICOT", "ARMOIRE", "BALEINE", "BISCUIT", "CAROTTE", "CERVEAU", "CHAPEAU", "CHAMEAU", "CHIFFRE", "COLLINE", "COUSSIN", "CRAVATE", "DAUPHIN", "DOSSIER", "ETAGERE", "FACTEUR", "FALAISE", "FAMILLE", "FENETRE", "FROMAGE", "GALETTE", "GRENIER", "GUITARE", "HAMSTER", "HORLOGE", "INSECTE", "JOURNAL", "LICORNE", "LUMIERE", "MANTEAU", "MARMITE", "MATELAS", "MUSIQUE", "PEINTRE", "PINCEAU", "PLANETE", "POISSON", "POMPIER", "PRAIRIE", "RECETTE", "ROBINET", "SABLIER", "SEMAINE", "SERPENT", "SILENCE", "SOURCIL", "TABLEAU", "TAMBOUR", "TAUREAU", "TERRAIN", "TORNADE", "VILLAGE", "VOITURE", "BIBERON", "HOPITAL", "LAVANDE", "PISCINE", "POUSSIN", "DIAMANT"], "8": ["AVENTURE", "BATAILLE", "BROUETTE", "CAMPAGNE", "CARTABLE", "CEINTURE", "CHAMPION", "CHAUSSON", "CHEMINEE", "CHOCOLAT", "ECUREUIL", "ELEPHANT", "ESCARGOT", "HERISSON", "MONTAGNE", "MUSICIEN", "PANTALON", "PAPILLON", "PAQUEBOT", "PASTEQUE", "PATIENCE", "POUBELLE", "RAQUETTE", "RUISSEAU", "SANDWICH", "SAUCISSE", "SCORPION", "SOUVENIR", "TABOURET", "TRAINEAU", "TRICYCLE", "VAISSEAU", "VOLAILLE", "VOYAGEUR", "LUNETTES"], "9": ["BOULANGER", "BOUTEILLE", "CASSEROLE", "CHARPENTE", "CHAUSSURE", "CONFITURE", "CORNICHON", "CROISSANT", "DINOSAURE", "ENVELOPPE", "FRAMBOISE", "JARDINIER", "KANGOUROU", "LIBELLULE", "MOUSTIQUE", "PARAPLUIE", "PATISSIER", "PERROQUET", "PHARMACIE", "PRINTEMPS", "RENCONTRE", "SPECTACLE", "TELEPHONE", "TOURNESOL", "TROMPETTE"]}, TRIES=6, LENS=[6,7,8,9];
+  var $=function(id){return document.getElementById(id);};
+  var tt; function toast(m){ var e=$('toast'); e.textContent=m; e.hidden=false; clearTimeout(tt); tt=setTimeout(function(){e.hidden=true;},1900); }
+  function store(k,v){ try{ if(v===undefined) return JSON.parse(localStorage.getItem(k)); localStorage.setItem(k,JSON.stringify(v)); }catch(e){ return null; } }
+  try{ var lab=new Date().toLocaleDateString('fr-FR',{month:'long',year:'numeric'});
+    document.querySelectorAll('.cm').forEach(function(e){ e.textContent=lab; });
+    document.title=document.title.replace(/\([^)]*\d{4}\)/,'('+lab+')'); }catch(e){}
+
+  function score(g,t){
+    var n=t.length, res=Array(n).fill('b'), left={};
+    for(var i=0;i<n;i++){ if(g[i]===t[i]) res[i]='r'; else left[t[i]]=(left[t[i]]||0)+1; }
+    for(i=0;i<n;i++){ if(res[i]!=='r'&&left[g[i]]){ res[i]='y'; left[g[i]]--; } }
+    return res;
+  }
+  var d=new Date(), dayKey=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+  var dayNo=Math.floor((Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())-Date.UTC(2026,0,1))/864e5);
+  function pick(n,salt){ var L=W[n]; return L[((dayNo*31+salt*17)%L.length+L.length)%L.length]; }
+  var dayLen=LENS[((dayNo%4)+4)%4];
+  function game(w){ return {w:w,rows:[],cur:w[0],hint:-1,done:false,won:false}; }
+  var mode='jour', G, S;
+
+  function load(){
+    if(mode==='jour'){ var s=store('tusmo-jour'); G=(s&&s.key===dayKey)?s:{key:dayKey,games:[game(pick(dayLen,0))],idx:0}; }
+    else if(mode==='suite'){ var s2=store('tusmo-suite'); G=(s2&&s2.key===dayKey)?s2:{key:dayKey,words:LENS.map(function(n,i){return pick(n,i+3);}),games:[],idx:0}; if(!G.games.length) G.games.push(game(G.words[0])); }
+    else { var n=+$('len').value||LENS[Math.floor(Math.random()*4)], L=W[n]; G={games:[game(L[Math.floor(Math.random()*L.length)])],idx:0}; }
+    S=G.games[G.idx]; $('len').hidden=mode!=='libre'; draw();
+  }
+  function save(){ if(mode==='jour') store('tusmo-jour',G); else if(mode==='suite') store('tusmo-suite',G); }
+  function known(){
+    var n=S.w.length, k=Array(n).fill(''); k[0]=S.w[0];
+    S.rows.forEach(function(g){ var r=score(g,S.w); for(var i=0;i<n;i++) if(r[i]==='r') k[i]=S.w[i]; });
+    if(S.hint>0) k[S.hint]=S.w[S.hint];
+    return k;
+  }
+  function draw(){
+    var n=S.w.length;
+    $('info').textContent=(mode==='jour'?'Mot du jour n° '+(dayNo+1):mode==='suite'?'Suite n° '+(dayNo+1)+' · mot '+(G.idx+1)+'/4':'Partie infinie')+' · '+n+' lettres · '+S.w[0]+'…';
+    $('steps').hidden=mode!=='suite';
+    if(mode==='suite') $('steps').innerHTML=G.words.map(function(w,i){ var gm=G.games[i], c=!gm?'':gm.won?'ok':gm.done?'ko':'cur'; return '<span class="'+c+'">'+w.length+'</span>'; }).join('');
+    $('grid').style.setProperty('--n',n);
+    var k=known(), h='';
+    for(var r=0;r<TRIES;r++){
+      h+='<div class="row'+(r===S.rows.length&&!S.done?' act':'')+'">';
+      if(r<S.rows.length){ var g=S.rows[r], sc=score(g,S.w); for(var i=0;i<n;i++) h+='<span class="c '+sc[i]+'">'+g[i]+'</span>'; }
+      else if(r===S.rows.length&&!S.done){ for(i=0;i<n;i++){ var ch=S.cur[i]; h+='<span class="c e'+(ch?' f':'')+'">'+(ch||'<i>'+(k[i]||'·')+'</i>')+'</span>'; } }
+      else for(i=0;i<n;i++) h+='<span class="c e"></span>';
+      h+='</div>';
+    }
+    $('grid').innerHTML=h;
+    var st={}, RK={b:1,y:2,r:3};
+    S.rows.forEach(function(g){ var sc=score(g,S.w); for(var i=0;i<n;i++){ var p=st[g[i]]; if(!p||RK[sc[i]]>RK[p]) st[g[i]]=sc[i]; } });
+    document.querySelectorAll('.kb button[data-k]').forEach(function(b){ var c=st[b.dataset.k]; b.className=c?'k '+c:'k'; });
+    $('hint').disabled=S.done||S.hint>=0;
+    if(S.done) end(); else $('end').hidden=true;
+    stats();
+  }
+  var KB=['AZERTYUIOP','QSDFGHJKLM','WXCVBN'];
+  $('kb').innerHTML=KB.map(function(r,ix){ return '<div class="kr">'+(ix===2?'<button type="button" class="k wide" data-a="ent">Entrée</button>':'')+r.split('').map(function(c){return '<button type="button" class="k" data-k="'+c+'">'+c+'</button>';}).join('')+(ix===2?'<button type="button" class="k wide" data-a="del" aria-label="Effacer">⌫</button>':'')+'</div>'; }).join('');
+  $('kb').addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; if(b.dataset.k) type(b.dataset.k); else if(b.dataset.a==='del') del(); else enter(); });
+  document.addEventListener('keydown',function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey) return;
+    var t=e.target; if(t&&(t.tagName==='INPUT'||t.tagName==='TEXTAREA'||t.tagName==='SELECT')) return;
+    var gr=$('jeu').getBoundingClientRect(); if(gr.bottom<0||gr.top>innerHeight) return;
+    if(e.key==='Enter'){ e.preventDefault(); enter(); } else if(e.key==='Backspace'){ e.preventDefault(); del(); }
+    else { var c=e.key.normalize('NFD').replace(/[̀-ͯ]/g,'').toUpperCase(); if(/^[A-Z]$/.test(c)) type(c); }
+  });
+  function type(c){ if(S.done) return; if(!S.cur) S.cur=S.w[0]; if(S.cur.length===1&&c===S.w[0]) return; if(S.cur.length<S.w.length) S.cur+=c; draw(); }
+  function del(){ if(S.done) return; if(S.cur.length>1) S.cur=S.cur.slice(0,-1); draw(); }
+  function shake(){ var r=document.querySelector('.row.act'); if(r){ r.classList.remove('shake'); void r.offsetWidth; r.classList.add('shake'); } }
+  function enter(){
+    if(S.done) return;
+    var g=S.cur, n=S.w.length;
+    if(g.length<n){ toast('Le mot doit faire '+n+' lettres'); shake(); return; }
+    S.rows.push(g); S.cur=S.w[0];
+    if(g===S.w){ S.done=true; S.won=true; } else if(S.rows.length>=TRIES) S.done=true;
+    if(S.done&&mode==='jour') record();
+    save(); draw();
+  }
+  $('hint').addEventListener('click',function(){
+    if(S.done||S.hint>=0) return;
+    var k=known(), free=[]; for(var i=1;i<S.w.length;i++) if(!k[i]) free.push(i);
+    if(!free.length){ toast('Toutes les lettres sont déjà trouvées !'); return; }
+    S.hint=free[Math.floor(Math.random()*free.length)]; save(); draw(); toast('Indice : '+S.w[S.hint]+' en position '+(S.hint+1));
+  });
+  function rec(){ return store('tusmo-stats')||{p:0,w:0,streak:0,best:0,last:'',dist:[0,0,0,0,0,0]}; }
+  function record(){
+    var s=rec(); if(s.last===dayKey) return;
+    s.p++; if(S.won){ s.w++; s.streak++; s.best=Math.max(s.best,s.streak); s.dist[S.rows.length-1]++; } else s.streak=0;
+    s.last=dayKey; store('tusmo-stats',s);
+  }
+  function stats(){
+    var s=rec(), mx=Math.max.apply(null,s.dist.concat([1]));
+    $('stN').innerHTML='<p><b>'+s.p+'</b>parties</p><p><b>'+(s.p?Math.round(s.w/s.p*100):0)+'%</b>victoires</p><p><b>'+s.streak+'</b>série</p><p><b>'+s.best+'</b>record</p>';
+    var cur=(mode==='jour'&&S.won)?S.rows.length:0;
+    $('dist').innerHTML=s.dist.map(function(v,i){ return '<p><span>'+(i+1)+'</span><i class="'+(cur===i+1?'me':'')+'" style="width:'+Math.max(8,v/mx*100)+'%">'+v+'</i></p>'; }).join('');
+  }
+  function emo(g){ return g.rows.map(function(r){ return score(r,g.w).map(function(x){return x==='r'?'🟥':x==='y'?'🟡':'🟦';}).join(''); }).join('\n'); }
+  function share(txt){
+    var ok=false; function yes(){ ok=true; toast('Résultat copié !'); }
+    function fb(){ var ta=document.createElement('textarea'); ta.value=txt; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');}catch(e){} ta.remove(); toast('Résultat copié !'); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(yes,function(){ if(!ok){ ok=true; fb(); } }); setTimeout(function(){ if(!ok){ ok=true; fb(); } },700); } else fb();
+  }
+  function end(){
+    var h, btns=[];
+    var praise=['Génial !','Magnifique !','Bravo !','Bien joué !','Ouf !','De justesse !'];
+    if(mode==='suite'){
+      var found=G.games.filter(function(g){return g.won;}).length;
+      if(S.won&&G.idx<3){
+        h='<p class="e-h">'+praise[S.rows.length-1]+'</p><p>Mot '+(G.idx+1)+' trouvé : <b>'+S.w+'</b>. Prochain mot : '+G.words[G.idx+1].length+' lettres.</p>';
+        btns.push(['next','Mot suivant →']);
+      } else {
+        h='<p class="e-h">'+(found===4?'Suite parfaite ! 🏆':'Suite terminée')+'</p><p>Score : <b>'+found+' / 4</b> mots.'+(S.won?'':' Le mot était <b>'+S.w+'</b>.')+'</p>';
+        btns.push(['share','Partager mon score']); btns.push(['libre','Partie infinie']);
+      }
+    } else {
+      h='<p class="e-h">'+(S.won?praise[S.rows.length-1]:'Perdu cette fois…')+'</p><p>Le mot était <b>'+S.w+'</b>'+(S.won?', trouvé en '+S.rows.length+' essai'+(S.rows.length>1?'s':''):'')+(S.hint>=0?' (avec indice)':'')+'.</p>';
+      btns.push(['share','Partager ma grille']); btns.push(['libre',mode==='libre'?'Nouvelle partie':'Partie infinie']);
+    }
+    $('end').hidden=false;
+    $('end').innerHTML=h+'<div class="e-b">'+btns.map(function(b){return '<button type="button" data-b="'+b[0]+'">'+b[1]+'</button>';}).join('')+'</div>';
+    $('end').querySelectorAll('button').forEach(function(b){ b.addEventListener('click',function(){
+      var a=b.dataset.b;
+      if(a==='next'){ G.idx++; G.games.push(game(G.words[G.idx])); S=G.games[G.idx]; save(); draw(); }
+      else if(a==='libre') setMode('libre');
+      else if(mode==='suite') share('Tusmo – suite du jour n° '+(dayNo+1)+' : '+G.games.filter(function(g){return g.won;}).length+'/4\n'+G.words.map(function(w,i){var g=G.games[i];return w.length+' lettres '+(g&&g.won?'✅ '+g.rows.length+'/6':'❌');}).join('\n'));
+      else share('Tusmo '+(mode==='jour'?'n° '+(dayNo+1):'partie infinie')+' · '+S.w.length+' lettres · '+(S.won?S.rows.length:'X')+'/6\n\n'+emo(S));
+    }); });
+  }
+  function setMode(m){ mode=m; document.querySelectorAll('.modes button').forEach(function(b){ var on=b.dataset.m===m; b.classList.toggle('on',on); b.setAttribute('aria-selected',on); }); load(); }
+  document.querySelectorAll('.modes button').forEach(function(b){ b.addEventListener('click',function(){ setMode(b.dataset.m); }); });
+  $('len').addEventListener('change',function(){ if(mode==='libre') load(); });
+
+  var hb=document.querySelector('.hamb'), nav=document.querySelector('.nav');
+  hb.addEventListener('click',function(){ var o=nav.classList.toggle('open'); hb.setAttribute('aria-expanded',o); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ nav.classList.remove('open'); hb.setAttribute('aria-expanded','false'); }); });
+
+  load();
+})();
+</script>
+</body>
+</html>
